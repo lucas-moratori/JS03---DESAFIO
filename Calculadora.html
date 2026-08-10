@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Aritmética</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+            margin: 0;
+        }
+        .caixa {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+        }
+        .resultado {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin: 8px 0;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .resultado .operacao {
+            color: #f7971e;
+            font-weight: bold;
+        }
+        .resultado .valor {
+            color: #28a745;
+            font-weight: bold;
+        }
+        h1 { color: #1a1a2e; }
+    </style>
+</head>
+<body>
+    <div class="caixa">
+        <h1>🧮 Calculadora</h1>
+        <div class="resultado">
+            <span class="operacao">Soma:</span> <span class="valor" id="soma"></span>
+        </div>
+        <div class="resultado">
+            <span class="operacao">Subtração:</span> <span class="valor" id="subtracao"></span>
+        </div>
+        <div class="resultado">
+            <span class="operacao">Multiplicação:</span> <span class="valor" id="multiplicacao"></span>
+        </div>
+        <div class="resultado">
+            <span class="operacao">Divisão:</span> <span class="valor" id="divisao"></span>
+        </div>
+        <div class="resultado">
+            <span class="operacao">Resto:</span> <span class="valor" id="resto"></span>
+        </div>
+
+    <script>
+        // ✏️ MODIFIQUE OS VALORES DAS VARIÁVEIS ABAIXO
+        let num1 = 20;
+        let num2 = 6;
+
+        // Cálculos usando operadores aritméticos
+        let soma = num1 + num2;
+        let subtracao = num1 - num2;
+        let multiplicacao = num1 * num2;
+        let divisao = num1 / num2;
+        let resto = num1 % num2;
+
+        // Exibe os resultados
+        document.getElementById("soma").textContent = soma;
+        document.getElementById("subtracao").textContent = subtracao;
+        document.getElementById("multiplicacao").textContent = multiplicacao;
+        document.getElementById("divisao").textContent = divisao;
+        document.getElementById("resto").textContent = resto;
+    </script>
+</body>
+</html>
